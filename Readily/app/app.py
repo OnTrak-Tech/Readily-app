@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, send_file
 import requests
 from bs4 import BeautifulSoup
@@ -47,4 +46,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
