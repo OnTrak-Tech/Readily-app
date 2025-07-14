@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web to Word/PDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 480px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+            padding: 36px 32px 32px 32px;
+            text-align: center;
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2d3a4b;
+            margin-bottom: 18px;
+            font-size: 2rem;
+        }
+        form {
+            margin-top: 18px;
+        }
+        input[type=url] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b0bec5;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            font-size: 1rem;
+            transition: border 0.2s;
+        }
+        input[type=url]:focus {
+            border: 1.5px solid #1976d2;
+            outline: none;
+        }
+        .filetype-select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #b0bec5;
+            margin-bottom: 18px;
+            font-size: 1rem;
+        }
+        button {
+            background: linear-gradient(90deg, #1976d2 0%, #64b5f6 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 28px;
+            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+            transition: background 0.2s, transform 0.1s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .footer {
+            margin-top: 32px;
+            color: #789;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Web Page to Word/PDF</h2>
+        <form method="post">
+            <input type="url" name="url" placeholder="Enter a public web page URL" required>
+            <label for="filetype">Choose file type:</label>
+            <select class="filetype-select" name="filetype" id="filetype">
+                <option value="docx">Word (.docx)</option>
+                <option value="pdf">PDF (.pdf)</option>
+            </select>
+            <button type="submit">Download</button>
+        </form>
+        <div class="footer">&copy; 2025 Readily | Powered by OnTraK Technologies</div>
+    </div>
+</body>
+</html>
